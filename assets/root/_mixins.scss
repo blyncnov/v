@@ -1,0 +1,99 @@
+@mixin Constraints {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@mixin Flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin Title {
+    font-size: clamp(3rem, 1vw, 40px);
+    text-transform: capitalize;
+    color: $hiveln-black;
+    position: relative;
+}
+
+@mixin Description {
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    margin: 1em 0;
+    opacity: 0.8;
+    color: $hiveln-black;
+    line-height: 1.5;
+}
+
+@mixin Button {
+    background-color: $hiveln-primary-color;
+    color: $hiveln-white;
+    outline: none;
+    height: 36px;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 12px;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@mixin Hiveln-Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    white-space: nowrap;
+    padding: 0.85em 2em;
+    border-radius: 4px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.133;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: $hiveln-shadow;
+    background-color: $hiveln-primary-color;
+    color: $hiveln-white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+        -o-font-smoothing: antialiased;
+        text-rendering: optimizeSpeed;
+        -moz-font-smoothing: antialiased;
+    }
+}
+
+@mixin Input {
+    width: 100% !important;
+    border-radius: 2px;
+    background: rgba(12, 48, 93, 0.022);
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 14px;
+    border: 1px solid rgba(138, 138, 160, 0.3);
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+    vertical-align: baseline;
+    font-family: "Urbanist", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
